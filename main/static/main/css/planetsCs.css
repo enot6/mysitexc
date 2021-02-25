@@ -1,0 +1,102 @@
+@keyframes fadeIn2 {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes enlarge-once {
+  0% { height: 1vh; }
+  100% { height: 1vh; }
+}
+@keyframes enlarge-onceBack {
+  100% { height: 1vh; }
+}
+.fixed-bottom{
+     top: -50vw;
+}
+.fixed-top{
+     top: 0vw;
+}
+.fixed {
+    position: fixed;
+    z-index: 9999;
+    width: 100vw;
+    height: 10vh;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,0.9) 0%, rgba(9,9,121,1) 35%, rgba(0,45,162,0.9) 100%);
+    -webkit-transition: top .4s ease-out 0s;
+    -moz-transition: top .4s ease-out 0s;
+    -o-transition: top .4s ease-out 0s;
+    transition: top .4s ease-out 0s;
+}
+
+
+newA .fixed .plnts{
+    color: #fff;
+    font-weight: bold;
+    position:fixed;
+    width: 100vw;
+    height: 1vh;
+    z-index: 999999;
+    opacity: 1;
+}
+newA .plnts img:hover{
+    transform: scale(1.3);
+}
+newA .ggi:hover .plnts{
+    animation: fadeIn2 1.5s linear 1 forwards;
+}
+newA .ggi:hover{
+    animation-play-state: running;
+}
+newA .ggi:not(:hover){
+    animation: enlarge-onceBack 0.1s linear 1 forwards paused;
+}
+
+
+newA .fixed .plnts A:link {text-decoration: none;}
+newA .fixed .plnts .mercT{opacity: 0; position: relative; width: 135px; padding-left: 15px;
+    background-color: rgba(138, 77, 0, 0.95); color: #141414; border-radius: 50px; font-size: 20px; right: 500px; }
+newA .fixed .plnts .venT{opacity: 0; position: relative; width: 102px; padding-left: 15px;
+    background-color: rgba(223, 113, 17, 0.95); color: #141414; border-radius: 50px; font-size: 20px; right: 150px; }
+newA .fixed .plnts .earT{opacity: 0; position: relative; width: 95px; padding-left: 15px;
+    background-color: rgba(11, 113, 229, 0.95); color: #141414; border-radius: 50px; font-size: 20px; right: 140px; }
+newA .fixed .plnts .marT{opacity: 0; position: relative; width: 85px; padding-left: 15px;
+    background-color: rgba(223, 45, 7, 0.95); color: #141414; border-radius: 50px; font-size: 20px; right: 140px; }
+newA .fixed .plnts .jupT{opacity: 0; position: relative; width: 110px; padding-left: 15px;
+    background-color: rgba(223, 174, 135, 0.95); color: #141414; border-radius: 50px; font-size: 20px; right: 160px; }
+newA .fixed .plnts .satT{opacity: 0; position: relative; width: 100px; padding-left: 15px;
+    background-color: rgba(224, 162, 99, 0.95); color: #141414; border-radius: 50px; font-size: 20px; right: 155px; top: -200px;}
+newA .fixed .plnts .uraT{opacity: 0; position: relative; width: 80px; padding-left: 15px;
+    background-color: rgba(64, 127, 191, 0.95); color: #141414; border-radius: 50px; font-size: 20px; right: 130px; top: -205px;}
+newA .fixed .plnts .neptT{opacity: 0; position: relative; width: 102px; padding-left: 15px;
+    background-color: rgba(14, 90, 140, 0.95); color: #141414; border-radius: 50px; font-size: 20px; right: 150px; top: -215px;}
+
+
+newA .fixed .plnts .planet1{position: relative; width: 0.1vh; right: -10vw; top: -6vh;}
+newA .fixed .plnts .planet1:hover + .mercT{opacity: 1;}
+newA .fixed .plnts .planet2{position: relative; width: 0.1vh; right: -15vw; top: -16vh;}
+newA .fixed .plnts .planet2:hover + .venT{opacity: 1;}
+newA .fixed .plnts .planet3{position: relative; width: 0.1vh; right: -22vw; top: -31vh;}
+newA .fixed .plnts .planet3:hover + .earT{opacity: 1;}
+newA .fixed .plnts .planet4{position: relative; width: 0.1vh; right: -30vw; top: -41vh;}
+newA .fixed .plnts .planet4:hover + .marT{opacity: 1;}
+newA .fixed .plnts .planet5{position: relative; width: 0.1vh; right: -37vw; top: -54vh;}
+newA .fixed .plnts .planet5:hover + .jupT{opacity: 1;}
+newA .fixed .plnts .planet6{position: relative; width: 0.1vh; right: -47vw; top: -66vh;}
+newA .fixed .plnts .planet6:hover + .satT{opacity: 1;}
+newA .fixed .plnts .planet7{position: relative; width: 0.1vh; right: -57vw; top: -78vh;}
+newA .fixed .plnts .planet7:hover + .uraT{opacity: 1;}
+newA .fixed .plnts .planet8{position: relative; width: 0.1vh; right: -65vw; top: -88.5vh;}
+newA .fixed .plnts .planet8:hover + .neptT{opacity: 1;}
+
+
+
+
+
+
+
+
+
+
+
+
+

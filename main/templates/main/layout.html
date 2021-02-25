@@ -1,0 +1,66 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% block title %} {% endblock %}
+    {% block stl %} {% endblock %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/planetsCs.css' %}">
+</head>
+<body>
+
+    <aside>
+        {% block bgImg %}
+        {% endblock %}
+    </aside>
+
+    <newA>
+        <div id="fixedDiv" class="fixed fixed-top">
+            <a href="{% url 'home2' %}"><img hspace="50px" height="80px" src="{% static 'main/img/galaxy.png' %}" alt="galaxy"></a>
+            <div class="plnts">
+                <a href="{% url 'mercury' %}" class="planet1"><img width="50vw" hspace="30"  src="{% static 'main/img/mercury.png' %}" alt="меркурий"> <div class="mercT">Меркурий</div></a>
+                <a href="{% url 'venus' %}" class="planet2"><img width="80vw" hspace="30" src="{% static 'main/img/venus.png' %}" alt="венера"> <div class="venT">Венера</div></a>
+                <a href="{% url 'earth' %}" class="planet3"><img width="100vw" hspace="30" src="{% static 'main/img/earth.png' %}" alt="земля"> <div class="earT">Земля</div></a>
+                <a href="{% url 'mars' %}" class="planet4"><img width="70vw" hspace="30" src="{% static 'main/img/mars.png' %}" alt="МаРс"> <div class="marT">Марс</div></a>
+                <a href="{% url 'jupiter' %}" class="planet5"><img width="90vw" hspace="30" src="{% static 'main/img/jupiter.png' %}" alt="юпитер"> <div class="jupT">Юпитер</div></a>
+                <a href="{% url 'saturn' %}" class="planet6"><img width="90vw" hspace="30" src="{% static 'main/img/saturn.png' %}" alt="сатурн"> <div class="satT">Сатурн</div></a>
+                <a href="{% url 'uranus' %}" class="planet7"><img width="70vw" hspace="30" src="{% static 'main/img/uranus.png' %}" alt="уран"> <div class="uraT">Уран</div></a>
+                <a href="{% url 'about' %}" class="planet8"><img width="70vw" hspace="30" src="{% static 'main/img/neptune.png' %}" alt="нептун"> <div class="neptT">Нептун</div></a>
+                <div class="ar">
+
+                </div>
+            </div>
+        </div>
+    </newA>
+    <script>
+        var oldScrollY = 0;
+        var div = document.getElementById("fixedDiv");
+
+        window.onscroll = function() {
+          var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+          var dY = scrolled - oldScrollY;
+
+          if ( dY > 0 ){
+            div.className = "fixed fixed-bottom";
+          } else {
+            div.className = "fixed fixed-top";
+          }
+
+          oldScrollY = scrolled;
+        }
+    </script>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+
+</body>
+</html>
